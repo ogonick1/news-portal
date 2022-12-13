@@ -1,0 +1,108 @@
+.section-video {
+  height: auto;
+  background-image: url(../../img/video/usikbg.png);
+  background-size: cover;
+}
+.video {
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 130%;
+    color: #FFFFFF;
+
+  }
+  &__btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+    border: none;
+    background: none;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__wreaper {
+    display: flex;
+    gap: 10px;;
+    justify-content: space-between;
+  }
+  &__big {
+    width: 50%;
+    overflow: auto;
+    .imgcard__img {
+      width: 42vw;
+      height: 24vw;
+    }
+  }
+  &__small {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+    width: 50%;
+    .imgcard {
+      width: 20vw;
+      height: auto
+    }
+    .imgcard__descr {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+    .imgcard__img {
+      width: 20vw;
+      height: 10vw;
+    }
+    .imgcard__date{
+      margin-top: 16px;
+      margin-bottom: 8px;
+    }
+  }
+
+}
+
+.imgcard {
+  &__date {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-top: 32px;
+    margin-bottom: 24px;
+  }
+  &__descr {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 130%;
+    color: #FFFFFF;
+  }
+  &__img {
+    object-fit: cover;
+  }
+}
+@media (max-width: 991.98px){
+  .video {
+    &__big {
+      display: none;
+    }
+    &__small {
+      width: 100%;
+      .imgcard {
+        width: 50vw;
+      }
+      .imgcard__img {
+        width: 50vw;
+        height: 30vw
+      }
+      
+    }
+  }
+}
+

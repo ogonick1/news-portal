@@ -1,0 +1,50 @@
+.section-status {
+  background-color: #121B30;
+}
+.status {   
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items:center;
+  &__losses{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    gap: 50px;
+    width: 100%;
+    white-space:nowrap;
+    overflow:hidden;
+    }
+  &__losse {
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #EBEBEB;
+    &-num{
+      color: #FF7534;
+    }
+  }
+  
+  &__day {
+    width: 150px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #fff;
+  }
+}
+
+@keyframes slidein {
+  from {-webkit-transform: translate(0, 0);}
+
+  to {-webkit-transform: translate(-100%, 0);}
+}
+

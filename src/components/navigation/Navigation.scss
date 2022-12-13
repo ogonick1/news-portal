@@ -1,0 +1,119 @@
+.navigation-section {
+  height: 49px;
+}
+.navigation{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 5px 16px;
+  &__live {
+    display: flex;
+    align-items:center;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    color: #182840;
+    width: 62px;
+    height: 21px;
+    &-item {
+      margin-left: 12px;
+    }
+    &-img {
+      animation: pulse 2s infinite;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    gap: 40px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    &-fire {
+      display: flex;
+      align-items:center;
+      gap: 8px;
+    }
+    &-link {
+      color: #182840;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+        transition: all 0.3s ease-out;
+        color:#FF7534
+      }
+      &-active {
+        color: #FF7534;
+      }
+    }
+  &__live {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    color: #182840;
+
+  }
+    
+  }
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.90);
+		box-shadow: 0 0 0 0 rgba(254, 206, 206, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+	}
+
+	100% {
+		transform: scale(0.9);
+		box-shadow: 0 0 0 0 rgba(255, 254, 254, 0);
+	}
+}
+@media (max-width: 991.98px){
+  .navigation{
+    &__link {
+      font-size: 12px;
+      gap: 20px
+    }
+  }
+}
+@media (max-width: 767.98px){
+  .navigation{
+    &__link {
+      font-size: 10px;
+      gap: 10px;
+    }
+    &__live {
+      font-size: 10px;
+    }
+
+  }
+}
+@media (max-width: 475.98px) {
+  .navigation{
+    &__live {
+      display: none;
+    }
+    &__link {
+      font-size: 10px;
+      gap: 5px;
+      a:nth-child(odd){
+        display: none;
+      }
+      
+  }}
+}
